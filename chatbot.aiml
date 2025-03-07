@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>HALO</pattern>
+        <template>Halo! Ada yang bisa saya bantu?</template>
+    </category>
+    <category>
+        <pattern>PROGRAM STUDI</pattern>
+        <template>PCR memiliki 11 program studi, termasuk Teknik Informatika dan Teknik Elektronika.</template>
+    </category>
+    <category>
+        <pattern>BEASISWA</pattern>
+        <template>PCR menyediakan beberapa beasiswa, seperti Beasiswa Bidikmisi dan Beasiswa YPCR.</template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <template>Maaf, saya tidak mengerti pertanyaan Anda. Coba tanyakan hal lain.</template>
+    </category>
+</aiml>
