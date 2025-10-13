@@ -6,7 +6,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters
 
 # Initialize AIML kernel
 kernel = aiml.Kernel()
-BACKEND_URL = "https://pcrchatbotapp-fg7i4.kinsta.app/api/aiml/generate-aiml"  # Your backend URL
+BACKEND_URL = "http://localhost:5000/api/aiml/generate-aiml"  # Your backend URL
 
 async def start(update: Update, context):
     await update.message.reply_text("Halo! Saya adalah chatbot PCR. Ada yang bisa saya bantu?")
@@ -40,7 +40,7 @@ async def reload_aiml(update: Update, context):
 async def handle_message(update: Update, context):
     user_message = update.message.text
     bot_response = kernel.respond(user_message)
-    await update.message.reply_text(bot_response)
+    await update.message.reply_text(bot_response, parse_mode='HTML')
 
 def main():
     TOKEN = "7321507910:AAH_Sg20Kn0kvV7FDS-cc-PShBJX9LAKUd0"
