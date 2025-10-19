@@ -39,8 +39,9 @@ async def reload_aiml(update: Update, context):
 
 async def handle_message(update: Update, context):
     user_message = update.message.text
+    print(user_message)
     bot_response = kernel.respond(user_message)
-    await update.message.reply_text(bot_response, parse_mode='HTML')
+    await update.message.reply_text(bot_response)
 
 def main():
     TOKEN = "7321507910:AAH_Sg20Kn0kvV7FDS-cc-PShBJX9LAKUd0"
